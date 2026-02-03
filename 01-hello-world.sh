@@ -3,3 +3,5 @@
 echo "Hello World"
 
 echo "Hello, Welcome to Shell Scripting"
+
+echo "Hi, I'm learning Shell Scripting"
