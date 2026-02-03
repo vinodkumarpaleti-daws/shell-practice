@@ -4,9 +4,9 @@ echo "Please enter a Number : "
 read Number
 
 if [ $Number -gt 10 ]; then
-    echo "Entered Number $Number greater than 10"
+    echo "Entered Number is $Number greater than 10"
 elif [ $Number -eq 10 ]; then
-    echo "Entered Number $Number is equal 10"
+    echo "Entered Number is $Number is equal 10"
 else
-    echo "Entered Number $Number less than 10"
+    echo "Entered Number is $Number less than 10"
 fi
