@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER=$1  # Pass the Variable on the CLI
+NUMBER=$1  # Pass the Variable Arg on the CLI
 
 # -gt -> greater than
 # -lt -> less than
