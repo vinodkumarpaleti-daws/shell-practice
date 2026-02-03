@@ -1,26 +1,26 @@
+#!/bin/bash
+echo "script started execution at : $(date '+%Y-%m-%d %H:%M:%S')"
+START_TIME=$(date "+%s") # Here this format will give detailed timestamp along with Date
+
+sleep 10
+END_TIME=$(date "+%s")       # (%Y- year; %m- month; %d- day of month (ex:01); %H- hour; %M- minute; %S- second))
+echo "script execution ended at : $(date '+%Y-%m-%d %H:%M:%S')"
+END_TIME=$(date +%s)
+EXECUTION_TIME=$(($END_TIME-$START_TIME))
+echo "script executed in $EXECUTION_TIME..sec"
+
 # #!/bin/bash
 
-# START_TIME=$(date "+%Y-%m-%d %H:%M:%S") # Here this format will give detailed timestamp along with Date
+# echo "script started executed at: $(date '+%Y-%m-%d %H:%M:%S')"
 
-# echo "script started executed at: $START_TIME"
-# sleep 13
-# END_TIME=$(date "+%Y-%m-%d %H:%M:%S")       # (%Y- year; %m- month; %d- day of month (ex:01); %H- hour; %M- minute; %S- second))
-# echo "script execution ended at: $END_TIME"
-# TOTAL_TIME=$(($END_TIME-$START_TIME))
-# echo "script executed in $TOTAL_TIME..sec"
+# start_time=$(date +%s)
 
-#!/bin/bash
+# sleep 5   # your script work
 
-echo "script started executed at: $(date '+%Y-%m-%d %H:%M:%S')"
+# end_time=$(date +%s)
 
-start_time=$(date +%s)
+# echo "script execution ended at: $(date '+%Y-%m-%d %H:%M:%S')"
 
-sleep 5   # your script work
+# execution_time=$((end_time - start_time))
 
-end_time=$(date +%s)
-
-echo "script execution ended at: $(date '+%Y-%m-%d %H:%M:%S')"
-
-execution_time=$((end_time - start_time))
-
-echo "Total execution time: ${execution_time} seconds"
+# echo "Total execution time: ${execution_time} seconds"
