@@ -2,7 +2,7 @@
 
 USERID=$(id -u)  # It will check weather the user is root user or not (id -u)
 
-if [$USERID -ne 0] then;
+if [$USERID -ne 0]; then
     echo "Please run this script with root user"
     exit 1  # It stops the script reteurn status code '1' (error/failure)
 fi
