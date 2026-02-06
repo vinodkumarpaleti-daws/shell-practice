@@ -32,10 +32,10 @@ fi
 # Installing Nodejs
 
 echo "Installing NodeJs.."
-dnf install nodejs -y
+dnf installll nodejs -y
 if [ $? -ne 0 ]; then
     echo "Installing Nodejs...Failure"
     exit 1
 else
-    echo "Installing Nodeja...SUCCESS"
+    echo "Installing Nodeja...Success"
 fi
