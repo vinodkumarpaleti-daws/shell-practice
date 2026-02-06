@@ -22,3 +22,9 @@ validate $? "Installing Nginx"
 # So, now it will check the 'dnf install nginx -y' command success or not and pass it to the validate function first argument.
 # Then if the command success or failure it will pass to the second argument.
 # In the second Argument it will check the Installation command.
+
+dnf install mysql -y
+validate $? "Installing Mysql"
+
+dnf install nodejs -y
+validate $? "Installing Nodejs"
