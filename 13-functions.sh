@@ -15,7 +15,7 @@ validate(){
     fi
 }
 
-dnf install nginx -y 
+dnf installl nginx -y 
 validate $? "Installing Nginx"  
 # Here we are passing two arguments to the validate function.
 # In the First Argument it will check the previous command status ($?)
