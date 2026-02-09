@@ -16,7 +16,7 @@ VALIDATE(){
         echo "$2....SUCCESS"
     fi
 }
-dnf install nginx -y
+dnf installl nginx -y
 VALIDATE $? "Installing Nginx"
 
 dnf install mysql -y
