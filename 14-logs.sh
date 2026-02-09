@@ -16,11 +16,11 @@ VALIDATE(){
         echo "$2....SUCCESS"
     fi
 }
-dnf installl nginx -y
+dnf install nginx -y &>> $LOG_FILE
 VALIDATE $? "Installing Nginx"
 
-dnf install mysql -y
+dnf install mysql -y &>> $LOG_FILE
 VALIDATE $? "Installing Mysql"
 
-dnf install nodejs -y
+dnf install nodejs -y &>> $LOG_FILE
 VALIDATE $? "Installing nodejs"
