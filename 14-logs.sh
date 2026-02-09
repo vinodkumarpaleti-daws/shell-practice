@@ -19,7 +19,7 @@ VALIDATE(){
 dnf install nginx -y &>> $LOG_FILE    # &>> $LOGS_FILE -- redirects the logs in the logs file.
 VALIDATE $? "Installing Nginx"
 
-dnf install mysql -y &>> $LOG_FILE
+dnf installl mysql -y &>> $LOG_FILE
 VALIDATE $? "Installing Mysql"
 
 dnf install nodejs -y &>> $LOG_FILE
