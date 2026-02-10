@@ -27,9 +27,9 @@ for package in $@
 do
   dnf list installed $package
   if [$? -ne 0 ]; then
-    echo "$package already Installed...skipping"
+    echo "$package not Installed...Installing now"
   else
-    echo "$package installing now"
+    echo "$package already installed..skiping installation"
   fi 
 done
 VALIDATE $? "Installing $package"
