@@ -23,7 +23,7 @@ VALIDATE(){
 
 # Here we validate weather Package exists or not
 
-for package $@
+for package in $@
 do
   dnf list installed $package
   if [$? -ne 0 ]; then
