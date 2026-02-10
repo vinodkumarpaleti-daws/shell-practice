@@ -4,12 +4,12 @@ USERID=$(id -u) # check the root USER ID
 LOGS_FOLDER="/var/logs/shell-script/"
 LOGS_FILE="$LOGS_FOLDER/$0.log"
 
-mkdir -p $LOGS_FOLDER
-
 if [ $USERID -ne 0 ]; then
     echo "Run this script with root user access" | tee -a $LOGS_FILE
     exit 1
 fi
+
+mkdir -p $LOGS_FOLDER
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
