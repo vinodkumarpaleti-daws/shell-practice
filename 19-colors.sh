@@ -13,7 +13,7 @@ LOGS_FOLDER="/var/logs/shell-sript/"
 LOGS_FILE="$LOGS_FOLDER/$0.logs"
 
 if [ $USERID -ne 0 ]; then
-    echo " $R Run this Script with root user access $N" | tee -a $LOGS_FILE
+    echo -e " $R Run this Script with root user access $N" | tee -a $LOGS_FILE # we should use the '-e' after the echo command
     exit 1
 fi
 
@@ -21,9 +21,9 @@ mkdir -p $LOGS_FOLDER  # It will create the logs folder if it does not exist.
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-        echo "$2.....$R FAILURE $N" | tee -a $LOGS_FILE
+        echo -e "$2.....$R FAILURE $N" | tee -a $LOGS_FILE
     else
-        echo "$2....$G SUCCESS $N" | tee -a $LOG_FILE
+        echo -e "$2....$G SUCCESS $N" | tee -a $LOG_FILE
     fi
 }
 
@@ -33,10 +33,10 @@ for package in $@
 do
   dnf list installed $package &>>$LOGS_FILE
   if [ $? -ne 0 ]; then
-    echo "$G $package not Installed...Installing now. $N"
+    echo -e "$G $package not Installed...Installing now. $N"
     dnf install $package -y &>>$LOGS_FILE
     VALIDATE $? "Installing $package"
   else
-    echo "$Y $package already installed..skiping installation $N"
+    echo -e "$Y $package already installed..skiping installation $N"
   fi 
 done
