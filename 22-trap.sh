@@ -2,7 +2,7 @@
 
 set -e  # Here if the script has error the 'set -e' will send the signal(ERR) to trap as below, and it will exit.
 trap 'echo "There is an error in $LINENO, Command: $BASH_COMMAND"' ERR # $LINENO, $BASH_COMMAND are the default variables.
-
+#  set and trap can replace the VALIDATE function but not sutable better readbility.
 USERID=$(id -u)
 LOGS_FOLDER="/var/log/shell-script"
 LOGS_FILE="/var/log/shell-script/$0.log"
