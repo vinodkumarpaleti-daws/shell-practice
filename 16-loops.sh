@@ -25,4 +25,4 @@ do
     VALIDATE $? "Installing $package"
 done
 
-
+# Command to run on the CLI: "sudo sh 16-loops.sh nginx mysql nodejs"
