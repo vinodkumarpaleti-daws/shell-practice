@@ -1,2 +1,2 @@
 # shell-practice
-This Repo is for practice the shell scripting.
+This Repo is for practicing shell scripting.
