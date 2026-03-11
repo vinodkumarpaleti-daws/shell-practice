@@ -24,5 +24,5 @@ if [ -z "$FILES_TO_DELETE" ]; then
       echo "Deleting file: $filepath"
       rm -f $filepath
       echo "Deleted file: $filepath"
-    done <<< $FILES_TO_DELETE
+    done <<< $FILES_TO_DELETE   # This '<<<' will take the variable as input and give it for delete.
 fi
